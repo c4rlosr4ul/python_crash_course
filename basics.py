@@ -12,11 +12,13 @@ if a == '69.0' :
     print('Hey! OPIO OUO')
 else: 
     print('Your number is ' + str(float(a)))
-    print(':D XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-    print('GAME1: Complete the word')
-    print('Mas ____ lokita...')
-    word = input()   
+print(':D XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+print('GAME1: Complete the word')
+print('Mas ____ lokita...')
+
+word = input()   
+
 while word !='bien':
     if word != "bien":
         print('Nada mano, completa de nuevo')
@@ -28,7 +30,6 @@ print('The number of characters of <rcsmáre> is ')
 a = '<rcsmáre>'
 print(len(a))
 print(':D XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-
     #I use len() and input 
 
 #1.2 Created the first program of the introduction
