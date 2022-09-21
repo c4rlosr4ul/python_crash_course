@@ -1,4 +1,6 @@
-from string import punctuation #Para emplear los símbolos reservados en python
+from string import punctuation
+from time import process_time_ns 
+    #Para emplear los símbolos reservados en python
 
 #1. Getting Started
 #1.1 Basic Python 
@@ -6,30 +8,39 @@ from string import punctuation #Para emplear los símbolos reservados en python
 print('This is a text ' + str(int(3.1415)))
 print('This is a example')
 print('Insert a number with decimals')
+
 a = input()
+
 if a == '69.0' :
     print('Your number is ' + str(float(a)))
     print('Hey! OPIO OUO')
 else: 
     print('Your number is ' + str(float(a)))
-    print(':D XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+    print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX :D')
 
-    print('GAME1: Complete the word')
-    print('Mas ____ lokita...')
-    word = input()   
+print('\tGAME1: Complete the word')
+print('Mas ____ lokita...')
+word = input()
+
 while word !='bien':
+    
     if word != "bien":
         print('Nada mano, completa de nuevo')
         word = input()   
     
 print('Ah... sape...')
+print('\tGood game... ')
 
+print(F'meanwhile...')
 print('The number of characters of <rcsmáre> is ')
-a = '<rcsmáre>'
-print(len(a))
-print(':D XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-    #I use len() and input 
+a = '<rcsmáre>'
+
+print(len(a))
+    #I use len() and input for count the characters
+print('Game over, congratulations>...')
+
+print('XXXXXXXXXXXXXXXXXXXXXXXXXXXX :D')
 
 #1.2 Created the first program of the introduction
 comillas = {"'"} 
@@ -53,3 +64,5 @@ while number_you_think != number_i_thinking:
 
 print('Yes! Sure...')
 print('You' + str("'") + 're ' + 'a wizard... :o' )
+print('Game over, congratulations>...')
+#Update... :P
