@@ -58,3 +58,8 @@ print(list_of_friend)
 list_of_friend.remove("csmáre")
 
 print(list_of_friend)
+
+#NOtes: De enfacicis y apostofres
+word1 = "That's Then"
+words = 'this "cat" :P'
+print(word1 + words)
