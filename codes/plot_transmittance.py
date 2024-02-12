@@ -21,16 +21,19 @@ def xi(E):
 
 # Función T corregida
 def T(E):
-    exp_term = np.exp(b * q(E))
-    sin_term = np.sin(b * p(E))
-    cos_term = np.cos(b * p(E))
-    denominator = 0.5 * xi(E) * sin_term + cos_term
+    #exp_term = np.exp(b * q(E))
+    #sin_term = np.sin(b * p(E))
+    #cos_term = np.cos(b * p(E))
+    #denominator = 0.5 * xi(E) * sin_term + cos_term
+    
+    denominator = 1 + (1 + 0.25 * xi(E) ** 2) * (np.sinh(q(E) * b)) ** 2
 
     # Para evitar divisiones por cero, devolvemos 0 si el denominador es 0
     if denominator == 0:
         return 0
 
-    return (exp_term / denominator) ** 2
+    #return (exp_term / denominator) ** 2
+    return (1 / denominator)
 
 # Generación de valores de E (desde un valor muy pequeño hasta justo por debajo de V_0 para evitar problemas matemáticos)
 E_values = np.linspace(0.01, V_0 - 0.01, 500)
@@ -39,11 +42,16 @@ E_values = np.linspace(0.01, V_0 - 0.01, 500)
 T_values = np.array([T(E) for E in E_values])
 
 # Creación de la gráfica
+plt.figure(figsize=(10, 6))
 plt.plot(E_values, T_values, label='Transmitancia')
 plt.xlabel('Energía (E)')
 plt.ylabel('Transmitancia (T)')
 plt.title('Transmitancia en función de la Energía')
 plt.legend()
 plt.grid(True)
+
+# Guardar la gráfica en formato PDF vectorial
+plt.savefig('transmitancia_vs_energia.pdf', format='pdf', bbox_inches='tight')
 plt.show()
+plt.close()  # Cierra la figura para liberar memoria si ya no la necesitas
 
