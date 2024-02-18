@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 m = 1.0  # Masa
 h_bar = 1.0  # Constante reducida de Planck
 V_0 = 10.0  # Potencial
-E = 1.0  # Energía
+E = 5.0  # Energía
 a = 1.0  # Comienzo de la barrera
 b = 2.0  # Fin de la barrera
 N = 100.0  # Extensión de la normalización
@@ -52,7 +52,7 @@ def psi_3(x):
     return A3 * np.exp(1j * p * x)
 
 # Generación de los valores de x y cálculo de psi para cada región
-x_values = np.linspace(-25, 25, 1000)
+x_values = np.linspace(-15, 15, 1000)
 psi_values = np.piecewise(x_values, [x_values < a, (x_values >= a) & (x_values <= b), x_values > b],
                           [lambda x: psi_1(x), lambda x: psi_2(x), lambda x: psi_3(x)])
 
